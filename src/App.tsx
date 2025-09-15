@@ -9,16 +9,12 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const downloadItems = [
-    "Download Top Cheats",
-    "Download Flying Cheat", 
-    "Download Short Flying Cheat",
-    "Download Turn Cheat Red",
-    "Download Turn Hack Flying Cheat",
-    "Download 3 Patch God",
-    "Download Turn Cheat Crown",
-    "Download Turn Hack 30",
-    "Download 3 Patch Red",
-    "Download 3 Patch Tiger"
+    "Download Flying Chess",
+    "Download 3 Patti Teen", 
+    "Download 3 Patti Flying Chess",
+    "Download Teen Patti Gold ",
+    "Download 3 Patti Lucky",
+    "Download 3 Patti OK"
   ];
 
   if (currentPage === 'privacy') {
