@@ -9,12 +9,18 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const downloadItems = [
-    "Download Flying Chess",
-    "Download 3 Patti Teen", 
-    "Download 3 Patti Flying Chess",
-    "Download Teen Patti Gold ",
-    "Download 3 Patti Lucky",
-    "Download 3 Patti OK"
+    "Download Dragon Tiger Club ",
+ "Download 3 Patti Flying Chess", 
+ "Download Flying Chess",  
+ "Download 3 Patti No1 ", 
+ "Download 3 Patti Blue",  
+ "Download 3 Patti Gold ", 
+ "Download 3 Patti Lucky", 
+ "Download Teen Patti Gold",  
+ "Download 3 Patti Ludo ", 
+ "Download 3 Patti Crown", 
+ "Download 3 Patti Teen ", 
+ "Download 3 Patti Tiger", 
   ];
 
   if (currentPage === 'privacy') {
