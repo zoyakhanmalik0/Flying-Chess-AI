@@ -7,7 +7,6 @@ interface AboutProps {
 }
 
 const About = ({ setCurrentPage, currentPage }: AboutProps) => {
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
       {/* Header */}
@@ -81,7 +80,13 @@ const About = ({ setCurrentPage, currentPage }: AboutProps) => {
                   <h3 className="text-2xl font-bold text-gray-900">AI Training in Flying Chess</h3>
                 </div>
                 <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                  Presently, our AI is undergoing intensive training and validation within the strategic landscape of Flying Chess. 
+                  Presently, our AI is undergoing intensive training and validation within the strategic landscape of{" "}
+                  <button
+                    onClick={() => setCurrentPage('home')}
+                    className="text-blue-600 hover:underline font-medium"
+                  >
+                    Flying Chess AI
+                  </button>. 
                   Here, it meticulously dissects player actions, dynamically adjusts to emergent strategies, and relentlessly 
                   refines its decision-making processes.
                 </p>
