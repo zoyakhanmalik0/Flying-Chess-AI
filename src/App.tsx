@@ -9,7 +9,6 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const downloadItems = [
-    "Download Dragon Tiger Club ",
  "Download 3 Patti Flying Chess", 
  "Download Flying Chess",  
  "Download 3 Patti No1 ", 
