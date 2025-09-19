@@ -9,17 +9,42 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const downloadItems = [
- "Download 3 Patti Flying Chess", 
- "Download Flying Chess",  
- "Download 3 Patti No1 ", 
- "Download 3 Patti Blue",  
- "Download 3 Patti Gold ", 
- "Download 3 Patti Lucky", 
- "Download Teen Patti Gold",  
- "Download 3 Patti Ludo ", 
- "Download 3 Patti Crown", 
- "Download 3 Patti Teen ", 
- "Download 3 Patti Tiger", 
+    { 
+      name: "Download 3 Patti Flying Chess", 
+      link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" 
+    },
+    { 
+      name: "Download Flying Chess",  
+      link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" 
+    },
+    { 
+      name: "Download 3 Patti No1 ", 
+      link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" 
+    },
+    { 
+      name: "Download 3 Patti Blue",  
+      link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" 
+    },
+    { 
+      name: "Download 3 Patti Gold ", 
+      link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" 
+    },
+    { 
+      name: "Download 3 Patti Lucky", 
+      link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" 
+    },
+    { 
+      name: "Download Teen Patti Gold",  
+      link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" 
+    },
+    { 
+      name: "Download 3 Patti Ludo ", 
+      link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" 
+    },
+    { 
+      name: "Download 3 Patti Crown", 
+      link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" 
+    },
   ];
 
   if (currentPage === 'privacy') {
@@ -81,15 +106,18 @@ function App() {
         <div className="text-center mb-16">
           <div className="grid gap-4 max-w-lg mx-auto">
             {downloadItems.map((item, index) => (
-              <button
+              <a
                 key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-lg 
                          transition-all duration-200 transform hover:scale-105 hover:shadow-lg
-                         flex items-center justify-center space-x-2"
+                         flex items-center justify-center space-x-2 no-underline"
               >
                 <Download className="h-4 w-4" />
-                <span>{item}</span>
-              </button>
+                <span>{item.name}</span>
+              </a>
             ))}
           </div>
         </div>
