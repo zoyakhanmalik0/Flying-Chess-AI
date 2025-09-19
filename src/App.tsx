@@ -10,11 +10,12 @@ function App() {
 
   const downloadItems = [
     { 
-      name: "Download 3 Patti Flying Chess", 
+      name: "Download Flying Chess",
+      
       link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" 
     },
     { 
-      name: "Download Flying Chess",  
+      name: "Download 3 Patti Flying Chess",   
       link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" 
     },
     { 
