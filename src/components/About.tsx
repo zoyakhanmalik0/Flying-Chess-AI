@@ -87,13 +87,12 @@ const About = ({ setCurrentPage, currentPage }: AboutProps) => {
                   >
                     Flying Chess AI
                   </button>. 
-                  Here, it meticulously dissects player actions, dynamically adjusts to emergent strategies, and relentlessly 
-                  refines its decision-making processes.
+                  Here, it carefully studies player actions, adapts to new strategies, and continuously 
+                  improves its decision-making processes.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  Through the replication of authentic game situations, the AI acquires the capacity for fluid, adaptive responses, 
-                  yielding invaluable insights into intuitive reasoning, creative problem-solving, and emergent intelligence akin 
-                  to human capabilities.
+                  By recreating real game situations, the AI learns to respond adaptively and intelligently, 
+                  gaining insights into reasoning, problem-solving, and creativity similar to human players.
                 </p>
               </div>
 
@@ -102,17 +101,17 @@ const About = ({ setCurrentPage, currentPage }: AboutProps) => {
                   <div className="text-center">
                     <Target className="h-12 w-12 text-purple-600 mx-auto mb-3" />
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">Enhanced Engagement</h4>
-                    <p className="text-gray-600">Elevating gaming's user engagement through intelligent AI systems</p>
+                    <p className="text-gray-600">Making games more engaging through intelligent AI systems</p>
                   </div>
                   <div className="text-center">
                     <Users className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Equitable Play</h4>
-                    <p className="text-gray-600">Ensuring fair and balanced gaming experiences for all players</p>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Fair Play</h4>
+                    <p className="text-gray-600">Ensuring fair and balanced experiences for all players</p>
                   </div>
                   <div className="text-center">
                     <Lightbulb className="h-12 w-12 text-green-600 mx-auto mb-3" />
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge Factor</h4>
-                    <p className="text-gray-600">Amplifying the challenge and strategic depth of gaming</p>
+                    <p className="text-gray-600">Adding more challenge and strategic depth to games</p>
                   </div>
                 </div>
               </div>
@@ -123,18 +122,17 @@ const About = ({ setCurrentPage, currentPage }: AboutProps) => {
                   <h3 className="text-2xl font-bold text-gray-900">Beyond Gaming Applications</h3>
                 </div>
                 <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                  This rigorous development cycle enables us to investigate AI's potential to elevate gaming's user engagement, 
-                  ensure equitable play, and amplify the challenge factor. Simultaneously, it unlocks pathways to transfer these 
-                  sophisticated learnings to diverse sectors.
+                  This training not only improves gameplay but also opens doors to wider applications of AI, 
+                  from better customer engagement to advanced automation across industries.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 mt-6">
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                    <h5 className="font-semibold text-gray-900 mb-2">Enhanced Customer Engagement</h5>
-                    <p className="text-gray-600 text-sm">Revolutionizing customer interactions through AI-driven insights</p>
+                    <h5 className="font-semibold text-gray-900 mb-2">Customer Engagement</h5>
+                    <p className="text-gray-600 text-sm">Improving customer experiences with AI-driven insights</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                    <h5 className="font-semibold text-gray-900 mb-2">Streamlined Automation</h5>
-                    <p className="text-gray-600 text-sm">Driving sophisticated automation across various industries</p>
+                    <h5 className="font-semibold text-gray-900 mb-2">Automation</h5>
+                    <p className="text-gray-600 text-sm">Streamlining processes across different industries</p>
                   </div>
                 </div>
               </div>
@@ -142,21 +140,21 @@ const About = ({ setCurrentPage, currentPage }: AboutProps) => {
               <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
                 <p className="text-lg leading-relaxed">
-                  We are architecting a future where AI and gaming evolve in tandem, forging intelligent systems that 
-                  captivate, enlighten, and motivate. The confluence of Artificial Intelligence and Gaming forms the 
-                  bedrock of our innovation.
+                  We are building a future where AI and gaming grow together, creating systems that 
+                  entertain, teach, and inspire. The meeting point of Artificial Intelligence and Gaming 
+                  is the foundation of our innovation.
                 </p>
               </div>
 
               <div className="border-l-4 border-purple-500 pl-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Symbiotic Innovation</h3>
                 <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                  We champion the perspective that games serve a dual purpose: offering entertainment while simultaneously 
-                  acting as potent platforms for technological experimentation, education, and iterative improvement.
+                  Games are not only entertainment—they are also powerful platforms for 
+                  learning, experimentation, and innovation.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  Our endeavor is to cultivate a symbiotic relationship between AI and gaming, fostering the development 
-                  of more intelligent, adaptive systems that serve to entertain, educate, and inspire.
+                  Our goal is to create a partnership between AI and gaming that produces smarter, 
+                  more adaptive systems that inspire and engage.
                 </p>
               </div>
             </div>
