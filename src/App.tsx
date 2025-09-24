@@ -7,33 +7,26 @@ import Contact from './components/Contact';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
-  // 🔹 Your reference download links
   const downloadItems = [
-    { name: "Download Flying Chess", link: "https://example.com/files/FlyingChess.apk" },
-    { name: "Download 3 Patti Flying Chess", link: "https://example.com/files/3PattiFlyingChess.apk" },
-    { name: "Download 3 Patti No1", link: "https://example.com/files/3PattiNo1.apk" },
-    { name: "Download 3 Patti Blue", link: "https://example.com/files/3PattiBlue.apk" },
-    { name: "Download 3 Patti Gold", link: "https://example.com/files/3PattiGold.apk" },
-    { name: "Download 3 Patti Lucky", link: "https://example.com/files/3PattiLucky.apk" },
-    { name: "Download Teen Patti Gold", link: "https://example.com/files/TeenPattiGold.apk" },
-    { name: "Download 3 Patti Ludo", link: "https://example.com/files/3PattiLudo.apk" },
-    { name: "Download 3 Patti Crown", link: "https://example.com/files/3PattiCrown.apk" },
+    { name: "Download Flying Chess", link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" },
+    { name: "Download 3 Patti Flying Chess", link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" },
+    { name: "Download 3 Patti No1", link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" },
+    { name: "Download 3 Patti Blue", link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" },
+    { name: "Download 3 Patti Gold", link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" },
+    { name: "Download 3 Patti Lucky", link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" },
+    { name: "Download Teen Patti Gold", link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" },
+    { name: "Download 3 Patti Ludo", link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" },
+    { name: "Download 3 Patti Crown", link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" },
   ];
 
-  // 🔹 Handle click for download
+  // 🔹 Function to force download
   const handleDownload = (url) => {
-    if (url.endsWith(".apk")) {
-      // If it's a direct APK file, trigger download
-      const link = document.createElement("a");
-      link.href = url;
-      link.setAttribute("download", "");
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } else {
-      // Otherwise, open the reference page
-      window.open(url, "_blank");
-    }
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   if (currentPage === 'privacy') {
