@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Download, Cpu, Brain, Users, Shield } from 'lucide-react';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import About from './components/About';
@@ -9,44 +8,26 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const downloadItems = [
-    { 
-      name: "Download Flying Chess",
-      
-      link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" 
-    },
-    { 
-      name: "Download 3 Patti Flying Chess",   
-      link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" 
-    },
-    { 
-      name: "Download 3 Patti No1 ", 
-      link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" 
-    },
-    { 
-      name: "Download 3 Patti Blue",  
-      link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" 
-    },
-    { 
-      name: "Download 3 Patti Gold ", 
-      link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" 
-    },
-    { 
-      name: "Download 3 Patti Lucky", 
-      link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" 
-    },
-    { 
-      name: "Download Teen Patti Gold",  
-      link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" 
-    },
-    { 
-      name: "Download 3 Patti Ludo ", 
-      link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" 
-    },
-    { 
-      name: "Download 3 Patti Crown", 
-      link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" 
-    },
+    { name: "Download Flying Chess", link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" },
+    { name: "Download 3 Patti Flying Chess", link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" },
+    { name: "Download 3 Patti No1", link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" },
+    { name: "Download 3 Patti Blue", link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" },
+    { name: "Download 3 Patti Gold", link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" },
+    { name: "Download 3 Patti Lucky", link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" },
+    { name: "Download Teen Patti Gold", link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000" },
+    { name: "Download 3 Patti Ludo", link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610" },
+    { name: "Download 3 Patti Crown", link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000" },
   ];
+
+  // 🔹 Function to force download
+  const handleDownload = (url) => {
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   if (currentPage === 'privacy') {
     return <PrivacyPolicy setCurrentPage={setCurrentPage} currentPage={currentPage} />;
@@ -107,18 +88,16 @@ function App() {
         <div className="text-center mb-16">
           <div className="grid gap-4 max-w-lg mx-auto">
             {downloadItems.map((item, index) => (
-              <a
+              <button
                 key={index}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => handleDownload(item.link)}
                 className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-lg 
                          transition-all duration-200 transform hover:scale-105 hover:shadow-lg
-                         flex items-center justify-center space-x-2 no-underline"
+                         flex items-center justify-center space-x-2"
               >
                 <Download className="h-4 w-4" />
                 <span>{item.name}</span>
-              </a>
+              </button>
             ))}
           </div>
         </div>
@@ -196,3 +175,4 @@ function App() {
 }
 
 export default App;
+
