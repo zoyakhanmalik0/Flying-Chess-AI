@@ -11,39 +11,38 @@ function App() {
   const downloadItems = [
     {
       name: "Download Flying Chess",
-      link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610",
+    
     },
     {
       name: "Download 3 Patti Flying Chess",
-      link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000",
+      
     },
     {
       name: "Download 3 Patti No1",
-      link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000",
+     
     },
     {
       name: "Download 3 Patti Blue",
-      link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000",
+      
     },
     {
       name: "Download 3 Patti Gold",
-      link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000",
-    },
+      
     {
       name: "Download 3 Patti Lucky",
-      link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610",
+     
     },
     {
       name: "Download Teen Patti Gold",
-      link: "https://flyingchess.com/?from_gameid=8165172&channelCode=100000",
+      
     },
     {
       name: "Download 3 Patti Ludo",
-      link: "https://flyingchess.com?from_gameid=8418021&channelCode=8307610",
+      
     },
     {
       name: "Download 3 Patti Crown",
-      link: "https://flyingchess.com/?from_gameid=8290235&channelCode=100000",
+      
     },
   ];
 
