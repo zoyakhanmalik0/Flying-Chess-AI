@@ -1,3 +1,4 @@
+```jsx
 import React, { useState } from "react";
 import { Download, Cpu, Brain, Users, Shield } from "lucide-react";
 import PrivacyPolicy from "./components/PrivacyPolicy";
@@ -7,47 +8,25 @@ import Contact from "./components/Contact";
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
 
-  // 🔹 Download buttons list
+  // 🔹 Download buttons list (links empty for now)
   const downloadItems = [
-    {
-      name: "Download Flying Chess",
-    
-    },
-    {
-      name: "Download 3 Patti Flying Chess",
-      
-    },
-    {
-      name: "Download 3 Patti No1",
-     
-    },
-    {
-      name: "Download 3 Patti Blue",
-      
-    },
-    {
-      name: "Download 3 Patti Gold",
-      
-    {
-      name: "Download 3 Patti Lucky",
-     
-    },
-    {
-      name: "Download Teen Patti Gold",
-      
-    },
-    {
-      name: "Download 3 Patti Ludo",
-      
-    },
-    {
-      name: "Download 3 Patti Crown",
-      
-    },
+    { name: "Download Flying Chess", link: "" },
+    { name: "Download 3 Patti Flying Chess", link: "" },
+    { name: "Download 3 Patti No1", link: "" },
+    { name: "Download 3 Patti Blue", link: "" },
+    { name: "Download 3 Patti Gold", link: "" },
+    { name: "Download 3 Patti Lucky", link: "" },
+    { name: "Download Teen Patti Gold", link: "" },
+    { name: "Download 3 Patti Ludo", link: "" },
+    { name: "Download 3 Patti Crown", link: "" },
   ];
 
   // 🔹 Force download handler
   const handleDownload = (url) => {
+    if (!url) {
+      alert("Download link not available yet!");
+      return;
+    }
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", "");
@@ -162,7 +141,7 @@ function App() {
                 A futuristic scene of artificial intelligence robots working
                 with a laptop, managing digital data, automation, and virtual
                 dashboards. The image symbolizes AI-driven innovation, machine
-                learning, and the future of smart technology. The intention
+                learning, and the future of smart technology. The intention is
                 improving AI to raise the Standard of Lifestyle.
               </p>
             </div>
