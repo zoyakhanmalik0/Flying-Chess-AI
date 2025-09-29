@@ -1,15 +1,24 @@
-```jsx
+```tsx
 import React, { useState } from "react";
 import { Download, Cpu, Brain, Users, Shield } from "lucide-react";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
+// 🔹 Define allowed page types
+type Page = "home" | "privacy" | "about" | "contact";
+
+// 🔹 Type for download items
+interface DownloadItem {
+  name: string;
+  link: string;
+}
+
 function App() {
-  const [currentPage, setCurrentPage] = useState("home");
+  const [currentPage, setCurrentPage] = useState<Page>("home");
 
   // 🔹 Download buttons list (links empty for now)
-  const downloadItems = [
+  const downloadItems: DownloadItem[] = [
     { name: "Download Flying Chess", link: "" },
     { name: "Download 3 Patti Flying Chess", link: "" },
     { name: "Download 3 Patti No1", link: "" },
@@ -22,7 +31,7 @@ function App() {
   ];
 
   // 🔹 Force download handler
-  const handleDownload = (url) => {
+  const handleDownload = (url: string) => {
     if (!url) {
       alert("Download link not available yet!");
       return;
@@ -47,9 +56,7 @@ function App() {
   }
 
   if (currentPage === "contact") {
-    return (
-      <Contact setCurrentPage={setCurrentPage} currentPage={currentPage} />
-    );
+    return <Contact setCurrentPage={setCurrentPage} currentPage={currentPage} />;
   }
 
   return (
@@ -212,3 +219,5 @@ function App() {
 }
 
 export default App;
+```
+
