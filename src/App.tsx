@@ -1,41 +1,54 @@
-```tsx
 import React, { useState } from "react";
 import { Download, Cpu, Brain, Users, Shield } from "lucide-react";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
-// 🔹 Define allowed page types
-type Page = "home" | "privacy" | "about" | "contact";
-
-// 🔹 Type for download items
-interface DownloadItem {
-  name: string;
-  link: string;
-}
-
 function App() {
-  const [currentPage, setCurrentPage] = useState<Page>("home");
+  const [currentPage, setCurrentPage] = useState("home");
 
-  // 🔹 Download buttons list (links empty for now)
-  const downloadItems: DownloadItem[] = [
-    { name: "Download Flying Chess", link: "" },
-    { name: "Download 3 Patti Flying Chess", link: "" },
-    { name: "Download 3 Patti No1", link: "" },
-    { name: "Download 3 Patti Blue", link: "" },
-    { name: "Download 3 Patti Gold", link: "" },
-    { name: "Download 3 Patti Lucky", link: "" },
-    { name: "Download Teen Patti Gold", link: "" },
-    { name: "Download 3 Patti Ludo", link: "" },
-    { name: "Download 3 Patti Crown", link: "" },
+  // 🔹 Download buttons list
+  const downloadItems = [
+    {
+      name: "Download Flying Chess",
+      link: "#" // Add actual URL here
+    },
+    {
+      name: "Download 3 Patti Flying Chess",
+      link: "#" // Add actual URL here
+    },
+    {
+      name: "Download 3 Patti No1",
+      link: "#" // Add actual URL here
+    },
+    {
+      name: "Download 3 Patti Blue",
+      link: "#" // Add actual URL here
+    },
+    {
+      name: "Download 3 Patti Gold",
+      link: "#" // Add actual URL here
+    },
+    {
+      name: "Download 3 Patti Lucky",
+      link: "#" // Add actual URL here
+    },
+    {
+      name: "Download Teen Patti Gold",
+      link: "#" // Add actual URL here
+    },
+    {
+      name: "Download 3 Patti Ludo",
+      link: "#" // Add actual URL here
+    },
+    {
+      name: "Download 3 Patti Crown",
+      link: "#" // Add actual URL here
+    },
   ];
 
   // 🔹 Force download handler
-  const handleDownload = (url: string) => {
-    if (!url) {
-      alert("Download link not available yet!");
-      return;
-    }
+  const handleDownload = (url) => {
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", "");
@@ -56,7 +69,9 @@ function App() {
   }
 
   if (currentPage === "contact") {
-    return <Contact setCurrentPage={setCurrentPage} currentPage={currentPage} />;
+    return (
+      <Contact setCurrentPage={setCurrentPage} currentPage={currentPage} />
+    );
   }
 
   return (
@@ -148,7 +163,7 @@ function App() {
                 A futuristic scene of artificial intelligence robots working
                 with a laptop, managing digital data, automation, and virtual
                 dashboards. The image symbolizes AI-driven innovation, machine
-                learning, and the future of smart technology. The intention is
+                learning, and the future of smart technology. The intention
                 improving AI to raise the Standard of Lifestyle.
               </p>
             </div>
@@ -219,4 +234,3 @@ function App() {
 }
 
 export default App;
-```
